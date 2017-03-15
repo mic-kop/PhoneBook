@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PhoneBook
 {
@@ -10,15 +11,22 @@ namespace PhoneBook
     {
         static void Main(string[] args)
         {
-            //Application.EnableVisualStyles();
-          //  Application.SetCompatibleTextRenderingDefault(false);
-          //  Application.Run(new Window());
-
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Window());
+          /////////////////////////////////////////////////////////////////////
             Interface Show = new Interface(); // start view
             Contacts x = new Contacts("contacts");
             int error;
             Show.StartText();
 
+
+
+            for (int i = 1; i <= 50; i++)
+            {
+               // listBox_lista.Items.Add("Item " + x.ToString());
+            }
+            /////////////////////////////////////////////////////////////////
             //  FileOperation Contactse = new FileOperation("contacts");
             while (true)
             {
