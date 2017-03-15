@@ -3,21 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using System.Windows.Forms;
-/*
- * 16 marca 2017 deadline
-Projekt w c#
-Konsola lub okienka
-Funkcjonalnosc ma byc:
--dodawanie kontaktow
--usuwanie kontaktu
--wyswietlanie wszystkich kontaktow
--wyszukiwanie kontaktow(po nazwie, czastkowej tzn "mil" znajdzie "Milen")
-(Najlepiej dynamicznie w sensie wpisanie jednego znaku odswieza wyniki)
-Opcjonalnie
--eksport kontaktow do jakiegos " standardowego" formatu (takie co potem mozna zaimportowac do tel czy cos)
-Gl hf, clutch or kick
- */
+
 namespace PhoneBook
 {
     class Program
