@@ -136,7 +136,7 @@ namespace PhoneBook
                 listBox1.Items.Clear();
                 listBox1.BeginUpdate();
                 if (i >= 0)
-                    listBox1.Items.Add(i + 1 + " \t" + x.GetName(i) + "\t" + x.GetSurname(i) + "\t" + x.GetNumber(i));
+                    listBox1.Items.Add(i + 1 + " \t" + x.GetSurname(i) + "\t" + x.GetName(i) + "\t" + x.GetNumber(i));
 
                 listBox1.EndUpdate();
                 if (i >= 0)
