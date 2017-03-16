@@ -37,7 +37,13 @@ namespace PhoneBook
                     Person x = new Person(name, surname, number);
                     list.Add(x);
                 }
-            }catch {
+                //
+                List<Person> SortedList = list.OrderBy(o => o.GetSurname()).ToList();
+                list = SortedList;
+                
+                //
+            }
+            catch {
                 Environment.Exit(0);
             }
         }
@@ -53,6 +59,8 @@ namespace PhoneBook
                 list.Add(x);
                 int error = file.Append(x);
                 if (error == 1) { return 1; }
+                List<Person> SortedList = list.OrderBy(o => o.GetSurname()).ToList();
+                list = SortedList;
                 return 0;
             }
             catch

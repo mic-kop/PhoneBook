@@ -31,7 +31,7 @@ namespace PhoneBook
             int length = x.GetLength();
             for (int i = 0; i < length; i++)
             {
-                listBox1.Items.Add(i + 1 + " \t" + x.GetName(i) + "\t" + x.GetSurname(i) + "\t" + x.GetNumber(i));
+                listBox1.Items.Add(i + 1 + " \t" + x.GetSurname(i) + "\t" + x.GetName(i) + "\t" + x.GetNumber(i));
             }
 
             listBox1.EndUpdate();
