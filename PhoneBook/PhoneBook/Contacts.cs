@@ -21,20 +21,24 @@ namespace PhoneBook
             pathname = filename;
 
             FileOperation file = new FileOperation(filename);
-
-            string[] lines = file.ReadAll();
-
-            //  Person x = new Person(name, surname, number);
-
-            for (int i = 0; i + 3 <= lines.Length; i = i + 3)
+            try
             {
-                name = lines[i];
-                surname = lines[i + 1];
-                strnumber = lines[i + 2];
-                number = int.Parse(strnumber);
+                string[] lines = file.ReadAll();
 
-                Person x = new Person(name, surname, number);
-                list.Add(x);
+                //  Person x = new Person(name, surname, number);
+
+                for (int i = 0; i + 3 <= lines.Length; i = i + 3)
+                {
+                    name = lines[i];
+                    surname = lines[i + 1];
+                    strnumber = lines[i + 2];
+                    number = int.Parse(strnumber);
+
+                    Person x = new Person(name, surname, number);
+                    list.Add(x);
+                }
+            }catch {
+                Environment.Exit(0);
             }
         }
         ~Contacts()

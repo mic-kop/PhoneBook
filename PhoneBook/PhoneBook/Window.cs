@@ -35,7 +35,10 @@ namespace PhoneBook
             }
 
             listBox1.EndUpdate();
-            listBox1.SetSelected(0, true);
+            try
+            {
+                listBox1.SetSelected(0, true);
+            }catch { }
         }
         private void button_exit(object sender, EventArgs e)
         {
