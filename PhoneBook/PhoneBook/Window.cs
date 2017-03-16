@@ -23,7 +23,7 @@ namespace PhoneBook
             updatelist();
         }
         private void updatelist() {
-            this.Controls.Add(listBox1);
+          //  this.Controls.Add(listBox1);
             Contacts x = new Contacts("contacts");
             listBox1.Items.Clear();
             listBox1.BeginUpdate();
@@ -112,6 +112,38 @@ namespace PhoneBook
                 labelInfo.Text = "Successfully removed a contact";
             }
             updatelist();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            Contacts x = new Contacts("contacts");
+            
+                int i = x.Find(textBoxSearch.Text);
+               
+                listBox1.Items.Clear();
+                listBox1.BeginUpdate();
+                if (i >= 0)
+                    listBox1.Items.Add(i + 1 + " \t" + x.GetName(i) + "\t" + x.GetSurname(i) + "\t" + x.GetNumber(i));
+
+                listBox1.EndUpdate();
+                if (i >= 0)
+                     listBox1.SetSelected(0, true);
+                
+            if (textBoxSearch.TextLength == 0)
+            {
+                updatelist();
+            }
+
         }
     }
 }

@@ -39,6 +39,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -46,7 +48,7 @@
             this.button1.Location = new System.Drawing.Point(21, 429);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(223, 65);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 7;
             this.button1.Text = "EXIT";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button_exit);
@@ -56,7 +58,7 @@
             this.button2.Location = new System.Drawing.Point(234, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 65);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 4;
             this.button2.Text = "New contact";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button_newcontact);
@@ -66,7 +68,7 @@
             this.textBoxName.Location = new System.Drawing.Point(84, 6);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(144, 22);
-            this.textBoxName.TabIndex = 3;
+            this.textBoxName.TabIndex = 1;
             this.textBoxName.TextChanged += new System.EventHandler(this.textBox_name);
             // 
             // textBoxSurname
@@ -74,7 +76,7 @@
             this.textBoxSurname.Location = new System.Drawing.Point(84, 33);
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(144, 22);
-            this.textBoxSurname.TabIndex = 3;
+            this.textBoxSurname.TabIndex = 2;
             this.textBoxSurname.TextChanged += new System.EventHandler(this.textBox_name);
             // 
             // textBoxNumber
@@ -127,27 +129,47 @@
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 22;
-            this.listBox1.Location = new System.Drawing.Point(21, 111);
-            this.listBox1.MultiColumn = true;
+            this.listBox1.Location = new System.Drawing.Point(21, 133);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(369, 312);
-            this.listBox1.TabIndex = 7;
+            this.listBox1.Size = new System.Drawing.Size(369, 290);
+            this.listBox1.TabIndex = 5;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // buttonDelete
             // 
             this.buttonDelete.Location = new System.Drawing.Point(250, 429);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(140, 29);
-            this.buttonDelete.TabIndex = 8;
+            this.buttonDelete.TabIndex = 6;
             this.buttonDelete.Text = "delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(234, 105);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(156, 22);
+            this.textBoxSearch.TabIndex = 8;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(177, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "search";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 499);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label3);
@@ -180,5 +202,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Label label4;
     }
 }
